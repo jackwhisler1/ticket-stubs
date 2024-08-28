@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { fetchUser } from "../services/user";
 import TicketStub from "./TicketStub";
 import Concert from "../types/Concert";
+import Header from "./Header";
 
 export default function Home() {
   const [concerts, setConcerts] = useState<Concert[]>([]);
@@ -23,8 +24,8 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <h1 className="text-4xl font-bold mb-4">Ticket Stubs</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-4xl">
+      <Header />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-4xl py-6 z-10">
         {concerts.length > 0 ? (
           concerts
             .slice(0, 8)

@@ -19,7 +19,7 @@ body {
 `;
   const eventDate = convertDateToUSFormat(concert.eventDate);
   return (
-    <div className="ticket bg-no-repeat bg-top bg-cover bg-gray-900 w-full h-48 rounded-2xl shadow-md mx-auto my-4 text-white relative overflow-hidden grid grid-cols-4">
+    <div className="ticket bg-no-repeat bg-top bg-cover bg-[#F4F0D5] w-full h-48 rounded-2xl shadow-md mx-auto my-4 text-black relative overflow-hidden grid grid-cols-4">
       <div className="date col-span-1 flex flex-col justify-center items-end shadow-md p-4">
         <span className="day text-6xl md:text-3xl lg:text-5xl">
           {new Date(eventDate).getDate()}
@@ -46,13 +46,7 @@ body {
         <span className="small text-sm md:text-base">{concert.venue.name}</span>
       </div>
       <div className="rip border-r-2 border-dotted border-gray-400 h-full absolute top-0 left-3/4 transform -translate-x-1/2"></div>
-      <div className="barcode absolute top-1/2 right-4 transform -translate-y-1/2">
-        <img
-          src={barcode}
-          alt="Ticket Barcode"
-          className="h-16 w-auto" // Adjust height and width as needed
-        />
-      </div>
+      <div className="barcode absolute top-1/2 right-4 transform -translate-y-1/2"></div>
     </div>
   );
 };
