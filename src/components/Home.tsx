@@ -4,6 +4,7 @@ import { fetchUser } from "../services/user";
 import TicketStub from "./TicketStub";
 import Concert from "../types/Concert";
 import Header from "./Header";
+import NextPageButton from "./NextPageButton";
 
 export default function Home() {
   const [concerts, setConcerts] = useState<Concert[]>([]);
@@ -35,6 +36,7 @@ export default function Home() {
             Loading...
           </p>
         )}
+        <NextPageButton />
       </div>
     </div>
   );

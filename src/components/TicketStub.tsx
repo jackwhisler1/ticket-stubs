@@ -2,6 +2,7 @@ import React from "react";
 import Concert from "../types/Concert";
 import { convertDateToUSFormat } from "../services/helpers";
 import barcode from "../assets/barcode.png";
+
 type TicketStubProps = {
   concert: Concert;
 };
