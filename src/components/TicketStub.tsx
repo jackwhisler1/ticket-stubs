@@ -1,25 +1,15 @@
 import React from "react";
 import Concert from "../types/Concert";
 import { convertDateToUSFormat } from "../services/helpers";
-import barcode from "../assets/barcode.jpg";
+import barcode from "../assets/barcode.png";
 type TicketStubProps = {
   concert: Concert;
 };
 const TicketStub: React.FC<TicketStubProps> = ({ concert }) => {
-  const styles = `
-body {
-  background-color: #436ea5;
-}
-.ticket-1 {
-  background-image: url("https://images.unsplash.com/photo-1483101974978-cf266fdf1139?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3289&q=80");
-}
-.ticket-2 {
-  background-image: url("https://images.unsplash.com/photo-1550184658-ff6132a71714?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2180&q=80");
-}
-`;
   const eventDate = convertDateToUSFormat(concert.eventDate);
+
   return (
-    <div className="ticket bg-no-repeat bg-top bg-cover bg-[#F4F0D5] w-full h-48 rounded-2xl shadow-md mx-auto my-4 text-black relative overflow-hidden grid grid-cols-4">
+    <div className="ticket bg-no-repeat bg-top bg-cover bg-[#F4F0D5] w-full h-48 rounded-sm shadow-md mx-auto my-4 text-black relative overflow-hidden grid grid-cols-4">
       <div className="date col-span-1 flex flex-col justify-center items-end shadow-md p-4">
         <span className="day text-6xl md:text-3xl lg:text-5xl">
           {new Date(eventDate).getDate()}
@@ -46,7 +36,9 @@ body {
         <span className="small text-sm md:text-base">{concert.venue.name}</span>
       </div>
       <div className="rip border-r-2 border-dotted border-gray-400 h-full absolute top-0 left-3/4 transform -translate-x-1/2"></div>
-      <div className="barcode absolute top-1/2 right-4 transform -translate-y-1/2"></div>
+      <div className="absolute top-1/2 left-80 transform -translate-y-1/2 rotate-90">
+        <img src={barcode} className="h-20 w-auto" alt="Ticket Barcode" />
+      </div>
     </div>
   );
 };
