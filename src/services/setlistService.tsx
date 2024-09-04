@@ -7,7 +7,7 @@ export async function fetchUser(userName: string, page: number = 1) {
     }
     return await response.json();
   } catch (error) {
-    console.error('Error fetching setlist:', error);
-    throw error; 
+    console.error("Error fetching setlist:", error);
+    throw error;
   }
 }
