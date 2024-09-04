@@ -2,6 +2,7 @@ import React from "react";
 import Concert from "../types/Concert";
 import { convertDateToUSFormat } from "../services/helpers";
 import barcode from "../assets/barcode.png";
+import "../styles/fonts.css";
 
 type TicketStubProps = {
   concert: Concert;
@@ -23,12 +24,12 @@ const TicketStub: React.FC<TicketStubProps> = ({ concert }) => {
         </span>{" "}
         <span className=" ml-3 small text-xs">{eventDate}</span>
       </div>
-      <div className="artist col-span-2 flex flex-col items-center justify-center font-bold shadow-md p-2">
-        <span className="name text-xl md:text-2xl lg:text-2xl">
+      <div className="artist col-span-2 flex flex-col items-center justify-center font-bold shadow-md p-2 ">
+        <span className="name text-xl md:text-2xl lg:text-2xl uppercase-text oswald-heavy">
           {concert.artist.name}
         </span>
         <br />
-        <span className="live small text-sm md:text-base">
+        <span className="live small text-sm md:text-base ">
           {concert.tour?.name}
         </span>
         <span className="small text-sm md:text-base">

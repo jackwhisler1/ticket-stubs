@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Header />
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-4xl py-6 z-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-4xl py-8 z-10">
         {loading ? (
           <p className="text-lg text-gray-500 col-span-2 text-center">
             Loading...
