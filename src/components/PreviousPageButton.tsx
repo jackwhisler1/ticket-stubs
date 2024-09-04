@@ -1,4 +1,3 @@
-import React from "react";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 
 export default function PreviousPageButton({

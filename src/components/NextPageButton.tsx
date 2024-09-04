@@ -1,4 +1,3 @@
-import React from "react";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 
 export default function NextPageButton({ onClick }: { onClick: () => void }) {

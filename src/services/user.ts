@@ -1,5 +1,5 @@
 export async function fetchUser(userName: string, page: number = 1) {
-  const apiKey = import.meta.env.PUBLIC_API_KEY;
+  const apiKey = import.meta.env.VITE_PUBLIC_API_KEY;
   const url = `/api/rest/1.0/user/${userName}/attended?p=${page}`;
 
   try {
@@ -7,7 +7,7 @@ export async function fetchUser(userName: string, page: number = 1) {
       method: "GET",
       mode: "cors",
       headers: {
-        "x-api-key": "iLDO_Tsz3WIIqDNFhLC_t1a-ib_Zr_lAdZAb",
+        "x-api-key": apiKey,
         Accept: "application/json",
         "Accept-Language": "en",
         "Content-Type": "application/json",
