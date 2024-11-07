@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { fetchUser } from "../services/user";
 import TicketStub from "./TicketStub";
 import Concert from "../types/Concert";
-import Header from "./Header";
 import NextPageButton from "./NextPageButton";
 import PreviousPageButton from "./PreviousPageButton";
 
